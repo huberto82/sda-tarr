@@ -16,7 +16,7 @@
     <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="400" minWidth="100.0" prefWidth="350" />
   </columnConstraints>
    <children>
-      <Button fx:id="submitButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#submitButton" prefHeight="25.0" prefWidth="485.0" text="Dodaj" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="1" GridPane.valignment="CENTER" />
+      <Button fx:id="submitButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="485.0" text="Dodaj" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="1" GridPane.valignment="CENTER" />
       <TextField fx:id="firstName" GridPane.columnIndex="1" />
       <Label text="Imię" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />

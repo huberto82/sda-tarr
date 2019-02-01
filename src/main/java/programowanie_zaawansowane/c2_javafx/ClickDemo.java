@@ -22,7 +22,6 @@ public class ClickDemo extends Application {
       circ.setStroke(Color.SKYBLUE);
       circ.setFill(Color.GREEN);
       root.getChildren().add(circ);
-      System.out.println("Click");
     });
     primaryStage.setScene(scene);
     primaryStage.setTitle("Click Demo");
