@@ -1,6 +1,8 @@
 package programowanie_zaawansowane.c2_javafx;
 
+import com.sun.javaws.jnl.JavaFXRuntimeDesc;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
