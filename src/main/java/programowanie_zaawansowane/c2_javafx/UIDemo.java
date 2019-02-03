@@ -26,6 +26,7 @@ public class UIDemo extends Application {
     pane.setVgap(10);
     Label label = new Label("Wpisz tekst");
     TextField textField = new TextField();
+    textField.setStyle("-fx-font-size: 24pt; -fx-border-color: #FFAABB; -fx-color: #FFBBAA");
     Button submit = new Button("Zapisz");
     TextArea textArea = new TextArea();
     pane.add(label, 0, 0);
