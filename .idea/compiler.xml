@@ -9,5 +9,8 @@
         <module name="sda-tarr" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sda-tarr" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
