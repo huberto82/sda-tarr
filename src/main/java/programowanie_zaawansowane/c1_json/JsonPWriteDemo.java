@@ -13,7 +13,7 @@ public class JsonPWriteDemo {
       .add("Zajęcia", bf.createArrayBuilder()                    //tworzymy pole typu tablica
           .add(bf.createObjectBuilder()                              //pierwszy obiekt tablicy
               .add("Tytuł", "Programowanie w Java 1")
-              .add("Data", bf.createObjectBuilder()              //pole Data jest oviektem
+              .add("Data", bf.createObjectBuilder()              //pole Data jest obiektem
                   .add("rok", 2019)
                   .add("miesiać", 1)
                   .add("dzień", 19)
