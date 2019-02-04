@@ -16,6 +16,7 @@ public class SimpleServer {
         System.out.println("Server waiting for connection.");
         Socket client = server.accept();
         System.out.println("Request accepted. "+client);
+        //Wątek obsługujący połączenie z klientem
         new Thread(()->{
           try {
             System.out.println("Thread started for client ");
