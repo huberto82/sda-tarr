@@ -1,10 +1,12 @@
 package programowanie_zaawansowane.c1_json;
+import com.sun.org.apache.xerces.internal.impl.io.UTF8Reader;
 
 import javax.json.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Collections;
 
 public class JsonPReadDemo {
