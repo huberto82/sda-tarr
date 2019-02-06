@@ -1,10 +1,7 @@
 package programowanie_zaawansowane.excercise.todo;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 
 public class Controller {
   @FXML
@@ -16,12 +13,17 @@ public class Controller {
   @FXML
   Button addTask;
 
+  @FXML
+  Spinner<Double> salary;
+
   public Controller() {
   }
 
 
   public void initialize(){
-
+    salary = new Spinner<Double>();
+    SpinnerValueFactory<Double> factory = new SpinnerValueFactory.DoubleSpinnerValueFactory(0,5000, 0);
+    salary.setValueFactory(factory);
   }
 
   @FXML

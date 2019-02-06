@@ -2,6 +2,12 @@ package programowanie_zaawansowane.c2_javafx.fxcontroller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.converter.DoubleStringConverter;
+import javafx.util.converter.IntegerStringConverter;
+
+import java.text.NumberFormat;
+import java.text.ParsePosition;
+import java.util.function.UnaryOperator;
 
 public class Controller {
     @FXML
@@ -19,6 +25,9 @@ public class Controller {
     @FXML
     private Button submitButton;
 
+    @FXML
+    private Spinner<Double> salary;
+
     public Controller(){
     }
 
@@ -27,6 +36,23 @@ public class Controller {
       eyeColor.getItems().add("zielone");
       eyeColor.getItems().add("niebieskie");
       eyeColor.getItems().add("piwne");
+      SpinnerValueFactory<Double> factory = new SpinnerValueFactory.DoubleSpinnerValueFactory(0,10000,0);
+      salary.setValueFactory(factory);
+
+      UnaryOperator<TextFormatter.Change> filter = c -> {
+        if (c.isContentChange() && c.getControlNewText().length() > 0) {
+          try {
+            Double.parseDouble(c.getControlNewText());
+            return c;
+          } catch (NumberFormatException e){
+            return null;
+          }
+        }
+        return c;
+      };
+      TextFormatter<Double> priceFormatter = new TextFormatter<Double>(
+              new DoubleStringConverter(), 0.0, filter);
+      salary.getEditor().setTextFormatter(priceFormatter);
     }
 
     @FXML
