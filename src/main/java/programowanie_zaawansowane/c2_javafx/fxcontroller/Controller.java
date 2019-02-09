@@ -36,6 +36,7 @@ public class Controller {
       eyeColor.getItems().add("zielone");
       eyeColor.getItems().add("niebieskie");
       eyeColor.getItems().add("piwne");
+
       SpinnerValueFactory<Double> factory = new SpinnerValueFactory.DoubleSpinnerValueFactory(0,10000,0);
       salary.setValueFactory(factory);
 
@@ -50,9 +51,10 @@ public class Controller {
         }
         return c;
       };
-      TextFormatter<Double> priceFormatter = new TextFormatter<Double>(
+
+      TextFormatter<Double> doubleFormatter = new TextFormatter<Double>(
               new DoubleStringConverter(), 0.0, filter);
-      salary.getEditor().setTextFormatter(priceFormatter);
+      salary.getEditor().setTextFormatter(doubleFormatter);
     }
 
     @FXML

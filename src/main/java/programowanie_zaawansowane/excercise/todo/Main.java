@@ -12,10 +12,15 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/ui.fxml"));
         primaryStage.setTitle("TodoApp");
-        primaryStage.setScene(new Scene(root, 400, 400));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
     public static void main(String[] args) {
         launch(args);
     }
 }
+
+//TODO Dodać przycisk do kasowania zadań deleteTask
+//TODO Dodać metodę uruchamianą po naciśnięciu przycisku deleteTask o nazwie deleteTaskFromList
+//TODO w metodzie usunąć zaznaczone zadanie z listTaskView

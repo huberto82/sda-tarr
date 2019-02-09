@@ -15,7 +15,7 @@ public class SimpleFXMLDemo extends Application {
   @Override
   public void start(Stage primaryStage) throws Exception {
     GridPane root = FXMLLoader.load(getClass().getResource("/form.fxml"));
-    Scene scene = new Scene(root, 400, 240);
+    Scene scene = new Scene(root, 700, 240);
     primaryStage.setTitle("FXML Welcome");
     primaryStage.setResizable(false);
     primaryStage.setScene(scene);
