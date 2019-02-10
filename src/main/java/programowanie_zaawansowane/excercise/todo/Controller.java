@@ -5,10 +5,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.time.LocalDate;
-
 public class Controller {
-  ObservableList<AbstractTask> todoList = FXCollections.observableArrayList();
+  ObservableList<String> todoList = FXCollections.observableArrayList();
 
   @FXML
   ListView taskListView;
@@ -35,8 +33,9 @@ public class Controller {
   //TODO Dodać testowanie poprawności dodawanego zadania
   @FXML
   public void addTaskToDo(){
-    String task = taskContent.getText()+" "+taskDateToDo.getValue().toString();
-    taskListView.getItems().add(task);
+    //AbstractTask task = new TextTask(taskContent.getText(), taskDateToDo.getValue());
+    //todoList.add(task);
+    //taskListView.getItems().add(task);
   }
 
   //TODO Dodać testowanie, czy wybrano element do skasowania i czy lista nie jest pusta

@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="sda-tarr2">
+    <output-path>$PROJECT_DIR$/out/artifacts/sda_tarr2</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="programowanie_zaawansowane.excercise.kantor.ChangeMoneyApp" />
+        <option name="description" value="Simple app connecting to site NBP to get currencies in JSON format." />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="exe" />
+        <option name="title" value="Kantor" />
+        <option name="vendor" value="SDA-TARR" />
+        <option name="version" value="1.0.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="sda_tarr.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/programowanie_zaawansowane/excercise/kantor/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="library" level="application" name="javax.json:javax.json-api:1.1.4" />
+        <element id="library" level="project" name="Maven: org.glassfish:javax.json:1.1.4" />
+        <element id="module-output" name="sda-tarr" />
+      </element>
+    </root>
+  </artifact>
+</component>
