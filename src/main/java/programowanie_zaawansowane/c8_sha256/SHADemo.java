@@ -1,7 +1,4 @@
 package programowanie_zaawansowane.c8_sha256;
-
-import sun.plugin2.applet.Plugin2ClassLoader;
-
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -20,11 +17,13 @@ public class SHADemo {
   }
 
   public static void main(String[] args) throws NoSuchAlgorithmException {
+
     MessageDigest digest = MessageDigest.getInstance("SHA-256");
-    String originalString = "hasło1234";
+    String originalString = "1234";
     byte[] encodedhash = digest.digest(originalString.getBytes(StandardCharsets.UTF_8));
     String encodedPass = bytesToHex(encodedhash);
     System.out.println(encodedPass);
+
     Scanner scan = new Scanner(System.in);
     System.out.println("Wpisz hasło");
     String password = scan.nextLine();

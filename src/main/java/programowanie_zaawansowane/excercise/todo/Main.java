@@ -20,7 +20,3 @@ public class Main extends Application {
         launch(args);
     }
 }
-
-//TODO Dodać przycisk do kasowania zadań deleteTask
-//TODO Dodać metodę uruchamianą po naciśnięciu przycisku deleteTask o nazwie deleteTaskFromList
-//TODO w metodzie usunąć zaznaczone zadanie z listTaskView
