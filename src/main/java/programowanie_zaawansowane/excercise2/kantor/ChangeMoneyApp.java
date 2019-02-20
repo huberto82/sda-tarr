@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.excercise.kantor;
+package programowanie_zaawansowane.excercise2.kantor;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -11,13 +11,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.net.MalformedURLException;
-import java.text.Format;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Formatter;
 
 public class ChangeMoneyApp extends Application {
 

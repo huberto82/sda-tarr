@@ -1,0 +1,8 @@
+version: 1.0
+released: 2019-02-08
+# data parameters
+filename: tododata.txt
+# Users
+users:
+  admin: passwd
+  user: userpass

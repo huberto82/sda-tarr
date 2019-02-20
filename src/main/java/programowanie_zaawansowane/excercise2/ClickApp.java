@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.excercise;
+package programowanie_zaawansowane.excercise2;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

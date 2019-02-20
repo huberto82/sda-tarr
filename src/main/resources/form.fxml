@@ -5,18 +5,19 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="TOP_CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="179.0" prefWidth="496.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programowanie_zaawansowane.c2_javafx.fxcontroller.Controller">
+<GridPane alignment="TOP_CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="255.0" prefWidth="496.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programowanie_zaawansowane.c2_javafx.fxcontroller.Controller">
   <columnConstraints>
-    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="250.0" minWidth="20" prefWidth="100" />
-    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="400" minWidth="100.0" prefWidth="350" />
+    <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="140.0" minWidth="124.0" prefWidth="148.0" />
+    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="400.0" minWidth="100.0" prefWidth="298.0" />
   </columnConstraints>
    <children>
-      <Button fx:id="submitButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="485.0" text="Dodaj" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="1" GridPane.valignment="CENTER" />
+      <Button fx:id="submitButton" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="485.0" text="Dodaj" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.rowSpan="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
       <TextField fx:id="firstName" GridPane.columnIndex="1" />
       <Label text="Imię" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -26,8 +27,18 @@
       <Label text="Data urodzenia" GridPane.rowIndex="2" />
       <ComboBox fx:id="eyeColor" prefHeight="25.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
       <Label text="Kolor oczu" GridPane.rowIndex="3" />
+      <Spinner fx:id="salary" editable="true" prefHeight="25.0" prefWidth="352.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label text="Pensja" GridPane.rowIndex="4" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="36.0" minHeight="15.0" prefHeight="20.0" />
+   </rowConstraints>
 </GridPane>

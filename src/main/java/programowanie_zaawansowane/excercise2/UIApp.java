@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.excercise;
+package programowanie_zaawansowane.excercise2;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.util.List;
 
 public class UIApp extends Application {
 

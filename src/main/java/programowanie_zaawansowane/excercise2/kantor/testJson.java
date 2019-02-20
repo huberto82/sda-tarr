@@ -1,7 +1,6 @@
-package programowanie_zaawansowane.excercise.kantor;
+package programowanie_zaawansowane.excercise2.kantor;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 
 public class testJson {

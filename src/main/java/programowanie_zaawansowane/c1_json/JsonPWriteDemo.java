@@ -15,7 +15,7 @@ public class JsonPWriteDemo {
               .add("Tytuł", "Programowanie w Java 1")
               .add("Data", bf.createObjectBuilder()              //pole Data jest obiektem
                   .add("rok", 2019)
-                  .add("miesiać", 1)
+                  .add("miesiąc", 1)
                   .add("dzień", 19)
                   .build())
               .build())
@@ -23,7 +23,7 @@ public class JsonPWriteDemo {
               .add("Tytuł", "Programowanie w Java 1")
               .add("Data", bf.createObjectBuilder()
                   .add("rok", 2019)
-                  .add("miesiać", 1)
+                  .add("miesiąc", 1)
                   .add("dzień", 19)
                   .build())
               .build())

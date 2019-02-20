@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.excercise.kantor;
+package programowanie_zaawansowane.excercise2.kantor;
 
 import javax.json.*;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CurrencyJsonReader {
-  static private String url = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
+  static final private String url = "http://api.nbp.pl/api/exchangerates/tables/A/?format=json";
   private URL urlToAPI;
 
   /**
