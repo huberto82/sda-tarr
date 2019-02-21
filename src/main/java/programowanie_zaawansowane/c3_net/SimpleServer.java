@@ -12,9 +12,11 @@ public class SimpleServer {
   public static void main(String[] args) {
     try {
       ServerSocket server = new ServerSocket(6666);
+      System.out.println(server.getInetAddress());
       while(true){
         System.out.println("Server waiting for connection.");
         Socket client = server.accept();
+
         System.out.println("Request accepted. "+client);
         //Wątek obsługujący połączenie z klientem
         new Thread(()->{
