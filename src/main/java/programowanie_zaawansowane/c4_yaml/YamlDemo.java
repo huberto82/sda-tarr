@@ -15,7 +15,6 @@ public class YamlDemo {
     Yaml yaml = new Yaml();
     try(InputStream in = Files.newInputStream(Paths.get(pathStr))) {
       Configuration config = yaml.loadAs(in, Configuration.class);
-      //System.out.println( config.toString() );
       System.out.println(yaml.dump(config));
     } catch (IOException e) {
       e.printStackTrace();
