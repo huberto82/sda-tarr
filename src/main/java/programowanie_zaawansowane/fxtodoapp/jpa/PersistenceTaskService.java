@@ -1,5 +1,6 @@
-package programowanie_zaawansowane.fxtodoapp.service;
+package programowanie_zaawansowane.fxtodoapp.jpa;
 
+import programowanie_zaawansowane.fxtodoapp.configuration.AppConfiguration;
 import programowanie_zaawansowane.fxtodoapp.model.AbstractTask;
 
 import java.io.IOException;

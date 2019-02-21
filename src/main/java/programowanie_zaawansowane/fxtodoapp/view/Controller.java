@@ -1,4 +1,4 @@
-package programowanie_zaawansowane.fxtodoapp.controller;
+package programowanie_zaawansowane.fxtodoapp.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

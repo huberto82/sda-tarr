@@ -1,13 +1,10 @@
 package programowanie_zaawansowane.fxtodoapp.configuration;
 
+import programowanie_zaawansowane.fxtodoapp.jpa.PersistenceType;
+
 public class AppConfiguration {
 
-  public enum PersistenceType{
-    FILE,
-    JDBC,
-  }
-
-  private PersistenceType persistanceType;
+  private static PersistenceType persistanceType;
 
   public void setPersistanceType(String persistanceType) {
     this.persistanceType = PersistenceType.valueOf(persistanceType);

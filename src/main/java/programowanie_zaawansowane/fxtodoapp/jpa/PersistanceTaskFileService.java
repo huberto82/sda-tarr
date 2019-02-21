@@ -1,6 +1,7 @@
-package programowanie_zaawansowane.fxtodoapp.service;
+package programowanie_zaawansowane.fxtodoapp.jpa;
 
 import javafx.collections.ObservableList;
+import programowanie_zaawansowane.fxtodoapp.configuration.AppConfiguration;
 import programowanie_zaawansowane.fxtodoapp.model.AbstractTask;
 
 import java.io.*;
@@ -11,8 +12,12 @@ public class PersistanceTaskFileService implements PersistenceTaskService{
   private final ObservableList<AbstractTask> list;
   private static PersistenceTaskService instance;
 
-  private PersistanceTaskFileService(String filePath, ObservableList list) throws IOException {
-    this.filePath = filePath;
+  private class PersistanceTaskFileServiceHelper{
+    private static final PersistenceTaskService INSTANCE = new PersistanceTaskFileService();
+  }
+
+  private PersistanceTaskFileService() {
+    this.filePath = config.filePath;
     this.list = list;
     init();
   }
@@ -57,6 +62,11 @@ public class PersistanceTaskFileService implements PersistenceTaskService{
     }
     ostream.close();
     file.close();
+  }
+
+  @Override
+  public AppConfiguration config() {
+    AppConfiguration.
   }
 
   @Override
