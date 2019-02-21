@@ -1,6 +1,7 @@
 package podstawowa;
 
 public class Task {
+  
   public int solution(String S) {
     int count = 0;
     int l = S.length();
