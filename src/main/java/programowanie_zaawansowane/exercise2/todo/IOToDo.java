@@ -1,9 +1,6 @@
-package programowanie_zaawansowane.fxtodoapp.service;
+package programowanie_zaawansowane.exercise2.todo;
 import javafx.collections.ObservableList;
-import programowanie_zaawansowane.exercise2.todo.AbstractTask;
-
 import java.io.*;
-
 public class IOToDo {
 
   static public void read(ObservableList<AbstractTask> todoList, String path) throws IOException {
