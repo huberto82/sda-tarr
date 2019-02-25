@@ -1,12 +1,16 @@
 package programowanie_zaawansowane.exercise3.game;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class BattleShipGame extends Application {
@@ -18,9 +22,19 @@ public class BattleShipGame extends Application {
   @Override
   public void start(Stage primaryStage) {
     AIPlayer ai = new AIPlayer("robot");
+    GridPane pane = new GridPane();
 
+    HBox top = new HBox();
+    top.setAlignment(Pos.CENTER);
+    top.setPadding(new Insets(5,5,5,5));
+    top.getChildren().add(new RadioButton("Hello"));
     HBox box = new HBox();
+    box.setAlignment(Pos.CENTER);
+    pane.add(top,0,0);
+    pane.add(box,0,1);
     Group left = new Group();
+    box.setBorder(new Border(new BorderStroke(Color.BLUEVIOLET,
+            BorderStrokeStyle.SOLID, new CornerRadii(5), new BorderWidths(5))));
     Group right = new Group();
     box.getChildren().addAll(left, right);
 
@@ -36,7 +50,7 @@ public class BattleShipGame extends Application {
     left.getChildren().addAll(plansza.getAll());
     right.getChildren().addAll(planszaAI.getAll());
 
-    Scene scene = new Scene(box, 800, 400);
+    Scene scene = new Scene(pane);
     left.setOnMouseClicked(event->{
       if (plansza.count() < 5) {
         plansza.setShip(event.getX(), event.getY());
@@ -62,7 +76,6 @@ public class BattleShipGame extends Application {
     });
 
     primaryStage.setScene(scene);
-    primaryStage.setResizable(false);
     primaryStage.setTitle("Statki");
     primaryStage.show();
   }

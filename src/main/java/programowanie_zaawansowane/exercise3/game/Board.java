@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Klasa tworzy plansze do gry w statki
+ * utworzona w dniu 22.02.2019
+ */
 public class Board {
   private double fieldSize;
   //tablica widoków
@@ -20,6 +24,11 @@ public class Board {
     ships = set;
   }
 
+  /**
+   * Konstruktor tworzy plansze, w której rozmiar pola
+   * określony jest przez parametr size
+   * @param size rozmiar pola
+   */
   public Board(double size) {
     this.board = new Rectangle[10][10];
     this.ships = new boolean[10][10];
@@ -31,7 +40,8 @@ public class Board {
   private void build(){
     for (int col = 0; col < 10; col++){
       for (int row = 0; row < 10; row++){
-        Rectangle r = new Rectangle(col*fieldSize, row*fieldSize, fieldSize, fieldSize);
+        Rectangle r = new Rectangle(col*fieldSize, row*fieldSize, fieldSize+1, fieldSize+1);
+        r.setStrokeWidth(1);
         r.setFill(Color.BLUE);
         r.setStroke(Color.WHITE);
         board[col][row] = r;
@@ -39,6 +49,10 @@ public class Board {
     }
   }
 
+  /**
+   * Metoda zwraca kolekcję pól planszy
+   * @return kolekcja obiektów Rectangle
+   */
   public Collection<Rectangle> getAll(){
     List<Rectangle> list = new ArrayList<>();
     for (int col = 0; col < 10; col++){

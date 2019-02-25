@@ -5,4 +5,4 @@ filename: tododata.txt
 # Users
 users:
   admin: passwd
-  user: userpass
+  user:
