@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Player {
   private String name;
+  private String password;
+
   private List<Point2D> shots;
 
   public Player(String name) {
