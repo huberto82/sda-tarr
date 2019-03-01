@@ -17,7 +17,7 @@ public class Board {
   private Rectangle board[][];
   //tablica statków
   private boolean ships[][];
-  //tablica strzałów
+  //tablica trafień
   private boolean hits[][];
 
   public void setShips(boolean[][] set){
