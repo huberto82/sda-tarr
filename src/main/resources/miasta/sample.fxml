@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programowanie_zaawansowane.exercise3.miasta.Controller">
+   <children>
+      <TextField fx:id="filtrKodu" onAction="#filtrujWgKodu" promptText="wpisz kod" />
+      <TableView fx:id="tabela" prefHeight="200.0" prefWidth="568.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="nazwa" prefWidth="120.0" text="Nazwa" />
+          <TableColumn fx:id="kod" prefWidth="120.0" text="Kod" />
+          <TableColumn fx:id="populacja" prefWidth="120.0" text="Populacja" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filtrMiasta" onAction="#filtrujWgMiasta" promptText="wpisz nazwę miasta" GridPane.rowIndex="1" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
