@@ -17,6 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -44,7 +45,9 @@ public class MojeKontakty extends Application {
 
   void wyczyscFormularz(){
     imie.setText("");
+    imie.clear();
     nazwisko.setText("");
+    nazwisko.clear();
     telefon.setText("");
     dataUrodzin.setValue(null);
   }
@@ -107,7 +110,9 @@ public class MojeKontakty extends Application {
 
     try {
       URL urlObrazka = new URL("https://media.etuistudio.pl/49181/etui-na-telefon-iphone-6-plus-baseus-aurora-czarny.jpg");
+
       Image obraz = new Image(urlObrazka.openStream());
+      //Image obraz = new Image(new FileInputStream("c:\\temp\\a.jpg"));
       obrazek.setImage(obraz);
       obrazek.setPreserveRatio(true);
       obrazek.setFitWidth(200);

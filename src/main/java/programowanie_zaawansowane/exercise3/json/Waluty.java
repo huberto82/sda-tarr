@@ -51,7 +51,10 @@ public class Waluty extends Application {
     KursWaluty waluta = walutyCombo.getItems().get(indeks);
     BigDecimal walutaB = new BigDecimal(kwotaWWalucie.getText());
     BigDecimal wynik = waluta.kurs.multiply(walutaB);
-    kwotaWZlotowkach.setText(wynik.toString());
+    NumberFormat f= NumberFormat.getCurrencyInstance(Locale.UK);
+    NumberFormat fn = NumberFormat.getNumberInstance();
+    fn.setMaximumFractionDigits(2);
+    kwotaWZlotowkach.setText(fn.format(wynik));
   }
 
   public static void main(String[] args) {

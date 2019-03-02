@@ -3,8 +3,12 @@ package programowanie_zaawansowane.c2_javafx.fxcontroller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import java.io.FileInputStream;
+import java.text.NumberFormat;
 
 
 public class SimpleFXMLDemo extends Application {

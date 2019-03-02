@@ -30,6 +30,7 @@ interface UserRepository extends CrudRepository<Message, Integer> {
 
 public class SimpleHibernateDemo {
   public static void main(String[] args) throws SystemException, NotSupportedException, HeuristicRollbackException, HeuristicMixedException, RollbackException {
+    /*
     TransactionManager TM = ;
     EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("HelloWorldPU");
@@ -42,5 +43,6 @@ public class SimpleHibernateDemo {
     tx.commit();
 // INSERT into MESSAGE (ID, TEXT) values (1, 'Hello World!')
     em.close();
+    */
   }
 }
