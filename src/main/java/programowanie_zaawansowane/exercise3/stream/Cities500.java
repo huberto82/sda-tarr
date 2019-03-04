@@ -6,6 +6,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.NumberFormat;
 import java.util.Optional;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 public class Cities500 {
@@ -16,11 +19,15 @@ public class Cities500 {
   static final int KOD = 8;
   static final int POPULACJA = 14;
   static final int STREFA = 17;
+  static final Logger log = Logger.getLogger("cities500");
 
   public static void main(String[] args) throws IOException {
-    Path plik = Paths.get("cities500.txt");
+    //ustawienie ściezki do pliku loga
+    log.addHandler(new FileHandler("cities_log.log"));
+    Path plik = Paths.get("c:\\temp\\cities500.txt");
     Stream<String> st = Files.lines(plik);
     //wszystkie miasta
+    log.log(Level.INFO,"Zapytanie wyświetlające wszystkie miasta w pliku");
     st.forEach(linia->System.out.println(linia.split("\t")[NAZWA] + " " + linia.split("\t")[SZER_GEO] +" " +linia.split("\t")[DLUG_GEO]));
     //miasta polskie
     Files.lines(plik).filter(linia -> linia.split("\t")[KOD].equals("PL")).forEach(linia -> System.out.println(linia));
@@ -87,6 +94,7 @@ public class Cities500 {
               return 0;
             }).forEach(v->System.out.println(v));
     //posortowana wg populacji lista polskich miast
+    log.log(Level.INFO,"Posortowana lista polskich miast wg populacji.");
     Files.lines(plik)
             .filter(linia->linia.split("\t")[KOD].equals("PL"))
             .sorted((a,b)->{
