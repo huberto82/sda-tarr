@@ -19,6 +19,10 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <hibernate.version>5.4.1.Final</hibernate.version>
+        <mysql.version>5.1.31</mysql.version>
+    </properties>
     <dependencies>
             <dependency>
                 <groupId>org.yaml</groupId>
@@ -55,29 +59,20 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>5.1.5.RELEASE</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.1.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
+
+        <!-- MySQL -->
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-commons</artifactId>
-            <version>2.0.5.RELEASE</version>
-        </dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency> <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
 
     </dependencies>
 
