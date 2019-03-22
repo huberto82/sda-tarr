@@ -1,4 +1,4 @@
-package jdbc_hibernate;
+package jdbchibernate;
 
 import java.sql.*;
 
@@ -7,7 +7,7 @@ public class JDBCDemo {
     try {
       //MySql
       Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-      Connection con = DriverManager.getConnection("jdbc:mysql://localhost/kratka?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
+      Connection con = DriverManager.getConnection("jdbc:mysql://localhost/kratka?serverTimezone=UTC", "root", "");
       Statement stat = con.createStatement();
       System.out.println("Created DB Connection....");
       stat.executeUpdate("CREATE TABLE USERS (username char(20), login char(20), email char(40))");
