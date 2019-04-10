@@ -190,7 +190,16 @@ public class Task {
     ll.remove();
     Collections.sort(ll);
     ll.forEach(sss-> System.out.println(sss));
-
+    long[] tab = new long[]{2, 2};
+    String st= "alibaba";
   }
 
+}
+
+class Node{
+  Node next;
+
+  public Node getNext(){
+    return next;
+  }
 }

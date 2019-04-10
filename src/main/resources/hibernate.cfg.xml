@@ -10,6 +10,6 @@
         <property name="hibernate.connection.serverTimezone">UTC</property>
         <property name="format_sql">true</property>
         <property name="show_sql">true</property>
-        <mapping class="jdbchibernate.MyMessage"/>
+        <mapping class="jdbchibernate.entity.Author"/>
     </session-factory>
 </hibernate-configuration>

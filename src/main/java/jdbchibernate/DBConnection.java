@@ -16,7 +16,6 @@ public class DBConnection {
     cfg.configure("hibernate.cfg.xml");
     ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties())
             .build();
-
     factory = cfg.buildSessionFactory(serviceRegistry);
   }
 
