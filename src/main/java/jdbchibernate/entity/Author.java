@@ -5,8 +5,7 @@ import javax.persistence.*;
 @Table(name= "author")
 public class Author {
     @Id
-    @GeneratedValue
-    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "first_name", unique = false, nullable = false)

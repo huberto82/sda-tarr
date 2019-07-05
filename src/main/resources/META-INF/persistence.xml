@@ -3,19 +3,33 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd
 http://java.sun.com/xml/ns/persistence "
              version="2.0">
-    <persistence-unit name="jpa-demo">
+    <persistence-unit name="blog" transaction-type="RESOURCE_LOCAL">
         <description>Hibernate demonstration with JPA</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>jdbchibernate.entity.Author</class>
-        <class>jdbchibernate.entity.Article</class>
         <properties>
         <!-- database connection -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/blog" />
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value=""/>
             <property name="hibernate.connection.serverTimezone" value="UTC"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
         </properties>
     </persistence-unit>
+    <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+        <description>Hibernate demonstration with JPA</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!-- database connection -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test" />
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.connection.serverTimezone" value="UTC"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>

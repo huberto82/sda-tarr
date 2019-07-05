@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 public class JPAPersistenceHibernateDemo {
   public static void main(String[] args) {
-    EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-demo");
+    EntityManagerFactory factory = Persistence.createEntityManagerFactory("blog");
     EntityManager em = factory.createEntityManager();
     Author a = new Author();
     a.setFirstName("Bolesław");

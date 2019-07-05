@@ -23,12 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="4ded1ff0-a885-410c-b86b-2459e71455d7">
-        <schema name="defro" object-types="view, table" />
-        <schema name="kratka" object-types="view, table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="4ded1ff0-a885-410c-b86b-2459e71455d7">

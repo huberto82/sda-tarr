@@ -15,7 +15,7 @@ public class OptionalDemo {
     //Meoda zwracająca typ opakowujący Integer
     System.out.println("Zostało: " + task1.getDaysToDeadlineInteger());
 
-    //Metoda zwracająca typ Optional
+    //Metoda zwracająca typ OptionalTest
     System.out.println("Zostało: " + task1.getDaysToDeadlineOptional());
 
 
@@ -28,10 +28,10 @@ public class OptionalDemo {
     //Meoda zwracająca typ opakowujący Integer
     System.out.println("Zostało: " + task2.getDaysToDeadlineInteger());
 
-    //Metoda zwracająca typ Optional
+    //Metoda zwracająca typ OptionalTest
     System.out.println("Zostało: " + task2.getDaysToDeadlineOptional().get());
 
-    //wykorzystanie Optional
+    //wykorzystanie OptionalTest
     task1.getDaysToDeadlineOptional().ifPresent(a -> System.out.println("Zostało "+a+" dni"));
     task2.getDaysToDeadlineOptional().ifPresent(a -> System.out.println("Zostało "+a+" dni"));
   }
